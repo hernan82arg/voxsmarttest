@@ -1,0 +1,37 @@
+{
+    "voxsmart-service-api": {
+        "users": [],
+        "teams": [
+            {
+                "team_id": "backend",
+                "permission": "push"
+            },
+            {
+                "team_id": "frontend",
+                "permission": "pull"
+            }
+        ]
+    },
+    "voxsmart-service-ui": {
+        "users": [],
+        "teams": [
+            {
+                "team_id": "frontend",
+                "permission": "push"
+            }
+        ]
+    },
+    "voxsmart-service-sdk": {
+        "users": [],
+        "teams": [
+            {
+                "team_id": "backend",
+                "permission": "push"
+            },
+            {
+                "team_id": "frontend",
+                "permission": "push"
+            }
+        ]
+    }
+}

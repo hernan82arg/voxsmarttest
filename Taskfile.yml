@@ -1,0 +1,40 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  plan:github:
+    desc: Plan all Github modules
+    cmds:
+      - terragrunt run-all plan {{ .CLI_ARGS }}
+    dir: github
+
+  apply:github:
+    desc: Apply all Github modules
+    cmds:
+      - terragrunt run-all apply
+    dir: github
+
+  plan:teams:
+    desc: Plan Github teams
+    cmds:
+      - terragrunt plan {{ .CLI_ARGS }}
+    dir: github/teams
+
+  apply:teams:
+    desc: Apply Github teams
+    cmds:
+      - terragrunt apply {{ .CLI_ARGS }}
+    dir: github/teams
+
+  plan:repositories:
+    desc: Plan Github repositories
+    cmds:
+      - terragrunt plan {{ .CLI_ARGS }}
+    dir: github/repositories
+
+  apply:repositories:
+    desc: Apply Github repositories
+    cmds:
+      - terragrunt apply {{ .CLI_ARGS }}
+    dir: github/repositories
