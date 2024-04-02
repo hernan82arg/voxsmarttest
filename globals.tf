@@ -33,4 +33,11 @@ variable "repositories" {
   }))
 
   default = []
+
+  validation {
+    condition = alltrue([
+      for o in var.repositories : contains(["private", "public"], o.visibility)
+    ])
+    error_message = "Invalid visibility selected, only allowed fruits are: 'private', 'public'. Default 'public'"
+  }
 }
