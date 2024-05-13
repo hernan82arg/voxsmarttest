@@ -3,6 +3,12 @@
 version: "3"
 
 tasks:
+  init:github:
+    desc: Plan all Github modules
+    cmds:
+      - terragrunt run-all init {{ .CLI_ARGS }}
+    dir: github
+
   plan:github:
     desc: Plan all Github modules
     cmds:

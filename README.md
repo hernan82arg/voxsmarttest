@@ -11,7 +11,7 @@ Code is structured into [terragrunt][] project.
 ## Quick Start
 
 ```
-$ brew install terragrunt go-task
+$ brew install asdf
 $ asdf install
 $ <your commits>
 $ task plan:github -- -var token=your_token
